@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scent as time</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+<body>
+    <form id="text1">
+        <div class = "text-cont">
+            <input type = "text" name="textbox" id = "textbox" placeholder="where are you" required>
+        </div>
+
+        <button name = "send" id="send">
+            submit
+        </button>
+
+    </form>
+    <script>
+        document.getElementById('text1').addEventListener('submit', function(e) {
+           
+            const inputText = document.getElementById('textbox').value;
+              //let input = document.getElementById('textbox').value;
+
+    //           if (inputText && inputText.trim() !== "") {
+    //     //userText.push(inputText);
+    //      insta1.push(new Insta(random(windowWidth), random(windowHeight), inputText));
+    //      console.log(inputText);
+    // } else {
+    //     console.error("empty");
+    // }
+    if (inputText && inputText.trim() !== "") {
+        //userText.push(inputText);
+         insta1.push(new Insta
+         (random(windowWidth), 
+         random(windowHeight), 
+         inputText
+    ));
+         console.log(inputText);
+         document.getElementById('textbox').value = '';
+    }
+           
+e.preventDefault();
+
+
+
+
+})
+    </script>
+</body>
+<script src="sketch.js"></script>
+</html>
