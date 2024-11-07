@@ -20,6 +20,20 @@
 
     </form>
     <script>
+
+        const ws = new WebSocket("ws://localhost:5503");
+
+        ws.addEventListener("open", () => {
+            console.log("we are connected");
+
+            ws.send("hello from client");
+
+        });
+
+        ws.addEventListener("message", e => {
+            console.log(e);
+        })
+
         document.getElementById('text1').addEventListener('submit', function(e) {
            
             const inputText = document.getElementById('textbox').value;
@@ -51,5 +65,6 @@ e.preventDefault();
 })
     </script>
 </body>
+<script src = "server/index.js"></script>
 <script src="sketch.js"></script>
 </html>
